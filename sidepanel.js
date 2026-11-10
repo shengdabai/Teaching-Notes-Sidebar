@@ -160,8 +160,10 @@ async function onExportMd() {
     if (levelCounts[note.level] !== undefined) levelCounts[note.level]++;
   }
   const uniqueSources = new Set(notes.map(n => n.sourceText)).size;
-  const firstNote = new Date(notes[0].createdAt);
-  const lastNote = new Date(notes[notes.length - 1].createdAt);
+  // Storage order is newest-first, so derive the range from the timestamps themselves.
+  const times = notes.map(n => new Date(n.createdAt).getTime()).filter(Number.isFinite);
+  const firstNote = new Date(times.length ? Math.min(...times) : now.getTime());
+  const lastNote = new Date(times.length ? Math.max(...times) : now.getTime());
 
   const lines = [
     '# Teaching Notes',
