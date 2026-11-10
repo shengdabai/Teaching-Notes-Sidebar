@@ -13,12 +13,12 @@
 ### Task 1: Bootstrap the project and testing harness
 
 **Files:**
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/package.json`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/vitest.config.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/tests/smoke.test.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/manifest.json`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/background.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/README.md`
+- Create: `./package.json`
+- Create: `./vitest.config.js`
+- Create: `./tests/smoke.test.js`
+- Create: `./manifest.json`
+- Create: `./background.js`
+- Create: `./README.md`
 
 - [ ] **Step 1: Write the failing smoke test**
 
@@ -111,9 +111,9 @@ git commit -m "chore: bootstrap extension project"
 ### Task 2: Add settings and storage primitives
 
 **Files:**
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/lib/storage.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/lib/validators.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/tests/storage.test.js`
+- Create: `./lib/storage.js`
+- Create: `./lib/validators.js`
+- Create: `./tests/storage.test.js`
 
 - [ ] **Step 1: Write the failing storage test**
 
@@ -215,10 +215,10 @@ git commit -m "feat: add local settings and draft storage helpers"
 ### Task 3: Add prompt building, response parsing, and Markdown export
 
 **Files:**
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/lib/prompt-builder.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/lib/response-parser.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/lib/markdown.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/tests/content-formatting.test.js`
+- Create: `./lib/prompt-builder.js`
+- Create: `./lib/response-parser.js`
+- Create: `./lib/markdown.js`
+- Create: `./tests/content-formatting.test.js`
 
 - [ ] **Step 1: Write the failing formatter test**
 
@@ -316,11 +316,11 @@ git commit -m "feat: add content generation helpers"
 ### Task 4: Add Gemini client and settings page behavior
 
 **Files:**
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/lib/gemini-client.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/settings.html`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/settings.css`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/settings.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/tests/settings.test.js`
+- Create: `./lib/gemini-client.js`
+- Create: `./settings.html`
+- Create: `./settings.css`
+- Create: `./settings.js`
+- Create: `./tests/settings.test.js`
 
 - [ ] **Step 1: Write the failing settings test**
 
@@ -428,11 +428,11 @@ git commit -m "feat: add Gemini settings flow"
 ### Task 5: Build the side panel UI and wire all user actions
 
 **Files:**
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/sidepanel.html`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/sidepanel.css`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/sidepanel.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/lib/clipboard.js`
-- Create: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/tests/sidepanel.test.js`
+- Create: `./sidepanel.html`
+- Create: `./sidepanel.css`
+- Create: `./sidepanel.js`
+- Create: `./lib/clipboard.js`
+- Create: `./tests/sidepanel.test.js`
 
 - [ ] **Step 1: Write the failing side panel test**
 
@@ -554,8 +554,8 @@ git commit -m "feat: build side panel note workflow"
 ### Task 6: Verify integrated behavior and polish documentation
 
 **Files:**
-- Modify: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/README.md`
-- Test: `/Users/adam/Desktop/chinese-teaching-note-sidepanel/tests/*.test.js`
+- Modify: `./README.md`
+- Test: `./tests/*.test.js`
 
 - [ ] **Step 1: Add a failing integration-focused test**
 

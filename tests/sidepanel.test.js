@@ -434,6 +434,32 @@ describe('side panel interactions', () => {
     });
   });
 
+  test('exports the date range oldest-first when storage is newest-first', async () => {
+    const older = '2026-03-26T12:00:00.000Z';
+    const newer = '2026-03-28T12:00:00.000Z';
+    mockLoadNotes.mockResolvedValue([
+      { id: '2', sourceText: '发展', level: 'A', line2: 'b', line3: 'b', createdAt: newer },
+      { id: '1', sourceText: '经济', level: 'A', line2: 'a', line3: 'a', createdAt: older }
+    ]);
+    const blobs = [];
+    const RealBlob = global.Blob;
+    global.Blob = class extends RealBlob {
+      constructor(parts, options) { super(parts, options); blobs.push(parts.join('')); }
+    };
+    URL.createObjectURL = vi.fn(() => 'blob:test');
+    URL.revokeObjectURL = vi.fn();
+    try {
+      const { initSidePanel } = await import('../sidepanel.js');
+      await initSidePanel();
+      document.querySelector('#export-notes').click();
+      await vi.waitFor(() => expect(blobs).toHaveLength(1));
+    } finally {
+      global.Blob = RealBlob;
+    }
+    const range = `**Date range:** ${new Date(older).toLocaleString()} — ${new Date(newer).toLocaleString()}`;
+    expect(blobs[0]).toContain(range);
+  });
+
   test('shows storage failures when exporting notes', async () => {
     const { initSidePanel } = await import('../sidepanel.js');
     await initSidePanel();
